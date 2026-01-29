@@ -313,3 +313,20 @@ func (c *Interpreter) HasContext() (string, bool) {
 func (c *Interpreter) LabelsSelector() (labels.Selector, error) {
 	return labels.Parse(c.args[labelKey])
 }
+
+// IsAICmd returns true if AI cmd is detected.
+func (c *Interpreter) IsAICmd() bool {
+	return aiCmd.Has(c.cmd)
+}
+
+// AIArgs returns the AI command arguments.
+func (c *Interpreter) AIArgs() []string {
+	if !c.IsAICmd() {
+		return nil
+	}
+	args := c.Args()
+	if args == "" {
+		return nil
+	}
+	return strings.Fields(args)
+}

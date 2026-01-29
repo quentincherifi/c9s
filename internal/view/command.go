@@ -305,6 +305,8 @@ func (c *Command) specialCmd(p *cmd.Interpreter, pushCmd bool) bool {
 		} else if err := c.app.dirCmd(a, pushCmd); err != nil {
 			c.app.Flash().Err(err)
 		}
+	case p.IsAICmd():
+		c.aiCmd(p)
 	default:
 		return false
 	}
@@ -384,4 +386,42 @@ func (c *Command) exec(p *cmd.Interpreter, gvr *client.GVR, comp model.Component
 	slog.Debug("History (exec)", slogs.Stack, strings.Join(c.app.cmdHistory.List(), "|"))
 
 	return
+}
+
+func (c *Command) aiCmd(p *cmd.Interpreter) {
+	args := p.AIArgs()
+
+	// Handle set-key command
+	if len(args) >= 2 && args[0] == "set-key" {
+		c.app.Config.K9s.AI.APIKey = args[1]
+		c.app.Config.K9s.AI.Enabled = true
+		if err := c.app.Config.Save(true); err != nil {
+			c.app.Flash().Errf("Failed to save API key: %v", err)
+		} else {
+			c.app.Flash().Info("AI API key saved")
+		}
+		return
+	}
+
+	// Handle provider command
+	if len(args) >= 2 && args[0] == "provider" {
+		c.app.Config.K9s.AI.Provider = args[1]
+		c.app.Config.K9s.AI.Enabled = true
+		if err := c.app.Config.Save(true); err != nil {
+			c.app.Flash().Errf("Failed to save provider: %v", err)
+		} else {
+			c.app.Flash().Infof("AI provider set to: %s", args[1])
+		}
+		return
+	}
+
+	// Otherwise treat as question or open AI chat view
+	question := ""
+	if len(args) > 0 {
+		question = strings.Join(args, " ")
+	}
+
+	if err := c.app.inject(NewAIChat(c.app, question), true); err != nil {
+		c.app.Flash().Err(err)
+	}
 }
