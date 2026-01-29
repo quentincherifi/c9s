@@ -4,11 +4,11 @@
 package model
 
 import (
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/dao"
-	"github.com/derailed/k9s/internal/render"
-	"github.com/derailed/k9s/internal/render/helm"
-	"github.com/derailed/k9s/internal/xray"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/dao"
+	"github.com/quentincherifi/c9s/internal/render"
+	"github.com/quentincherifi/c9s/internal/render/helm"
+	"github.com/quentincherifi/c9s/internal/xray"
 )
 
 // Registry tracks resources metadata.

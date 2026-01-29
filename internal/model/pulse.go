@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/derailed/k9s/internal"
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/dao"
-	"github.com/derailed/k9s/internal/health"
+	"github.com/quentincherifi/c9s/internal"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/dao"
+	"github.com/quentincherifi/c9s/internal/health"
 )
 
 // PulseListener represents a health model listener.

@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/derailed/k9s/internal/config/data"
-	"github.com/derailed/k9s/internal/config/json"
+	"github.com/quentincherifi/c9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/config/json"
 	"github.com/derailed/tcell/v2"
 	"github.com/derailed/tview"
 	"gopkg.in/yaml.v3"
@@ -51,7 +51,7 @@ func (ts TextStyle) ToShortString() string {
 type (
 	// Styles tracks K9s styling options.
 	Styles struct {
-		K9s       Style `json:"k9s" yaml:"k9s"`
+		K9s       Style `json:"c9s" yaml:"c9s"`
 		listeners []StyleListener
 	}
 

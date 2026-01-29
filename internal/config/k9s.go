@@ -15,9 +15,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/config/data"
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/slogs"
 )
 
 type gpuVendors map[string]string
@@ -32,7 +32,7 @@ var defaultGPUVendors = gpuVendors{
 	"intel":         "gpu.intel.com/i915",
 }
 
-// K9s tracks K9s configuration options.
+// C9s tracks K9s configuration options.
 type K9s struct {
 	LiveViewAutoRefresh bool       `json:"liveViewAutoRefresh" yaml:"liveViewAutoRefresh"`
 	GPUVendors          gpuVendors `json:"gpuVendors" yaml:"gpuVendors"`

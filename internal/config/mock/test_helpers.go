@@ -13,8 +13,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/config"
 	"github.com/stretchr/testify/require"
 	version "k8s.io/apimachinery/pkg/version"
 	"k8s.io/cli-runtime/pkg/genericclioptions"

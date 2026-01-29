@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/derailed/k9s/internal/config/data"
-	"github.com/derailed/k9s/internal/config/mock"
+	"github.com/quentincherifi/c9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/config/mock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v3"
@@ -29,19 +29,19 @@ func TestDirLoad(t *testing.T) {
 		cfg   *data.Config
 	}{
 		"happy-cl-1-ct-1": {
-			dir:   "testdata/data/k9s",
+			dir:   "testdata/data/c9s",
 			flags: makeFlags("cl-1", "ct-1-1"),
 			cfg:   mustLoadConfig("testdata/configs/ct-1-1.yaml"),
 		},
 
 		"happy-cl-1-ct2": {
-			dir:   "testdata/data/k9s",
+			dir:   "testdata/data/c9s",
 			flags: makeFlags("cl-1", "ct-1-2"),
 			cfg:   mustLoadConfig("testdata/configs/ct-1-2.yaml"),
 		},
 
 		"happy-cl-2": {
-			dir:   "testdata/data/k9s",
+			dir:   "testdata/data/c9s",
 			flags: makeFlags("cl-2", "ct-2-1"),
 			cfg:   mustLoadConfig("testdata/configs/ct-2-1.yaml"),
 		},

@@ -16,7 +16,7 @@ slate: &slate "slategray"
 gray: &gray "gray"
 
 # Skin...
-k9s:
+c9s:
   body:
     fgColor: *fg
     bgColor: *bg

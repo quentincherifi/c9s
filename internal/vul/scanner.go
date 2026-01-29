@@ -27,8 +27,8 @@ import (
 	"github.com/anchore/grype/grype/vex"
 	"github.com/anchore/grype/grype/vulnerability"
 	"github.com/anchore/syft/syft"
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/slogs"
 )
 
 var ImgScanner *imageScanner

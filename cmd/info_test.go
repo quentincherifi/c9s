@@ -6,7 +6,7 @@ package cmd
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config"
 	"github.com/stretchr/testify/assert"
 )
 

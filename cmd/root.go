@@ -12,12 +12,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/color"
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/config/data"
-	"github.com/derailed/k9s/internal/slogs"
-	"github.com/derailed/k9s/internal/view"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/color"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/view"
 	"github.com/lmittmann/tint"
 	"github.com/mattn/go-colorable"
 	"github.com/spf13/cobra"
@@ -27,8 +27,8 @@ import (
 
 const (
 	appName      = config.AppName
-	shortAppDesc = "A graphical CLI for your Kubernetes cluster management."
-	longAppDesc  = "K9s is a CLI to view and manage your Kubernetes clusters."
+	shortAppDesc = "A graphical CLI for your Kubernetes cluster management with AI assistance."
+	longAppDesc  = "C9s is K9s with Claude AI integration to help you manage your Kubernetes clusters."
 )
 
 var _ data.KubeSettings = (*client.Config)(nil)

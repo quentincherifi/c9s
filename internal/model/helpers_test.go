@@ -6,7 +6,7 @@ package model_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/model"
+	"github.com/quentincherifi/c9s/internal/model"
 	"github.com/stretchr/testify/assert"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

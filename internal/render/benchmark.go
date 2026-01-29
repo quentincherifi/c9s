@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/model1"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/model1"
 	"github.com/derailed/tcell/v2"
 	"github.com/derailed/tview"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

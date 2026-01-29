@@ -6,10 +6,10 @@ package view
 import (
 	"context"
 
-	"github.com/derailed/k9s/internal"
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/dao"
-	"github.com/derailed/k9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/dao"
+	"github.com/quentincherifi/c9s/internal/ui"
 	"github.com/derailed/tcell/v2"
 )
 

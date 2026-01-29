@@ -6,7 +6,7 @@ package config_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config"
 	"github.com/derailed/tcell/v2"
 	"github.com/derailed/tview"
 	"github.com/stretchr/testify/assert"

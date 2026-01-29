@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright Authors of K9s
+// Copyright Authors of C9s
 
 package main
 
@@ -7,7 +7,7 @@ import (
 	"flag"
 	"os"
 
-	"github.com/derailed/k9s/cmd"
+	"github.com/quentincherifi/c9s/cmd"
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 	"k8s.io/klog/v2"
 )

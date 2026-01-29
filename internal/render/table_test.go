@@ -6,10 +6,10 @@ package render_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/client"
-	cfg "github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/model1"
-	"github.com/derailed/k9s/internal/render"
+	"github.com/quentincherifi/c9s/internal/client"
+	cfg "github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/model1"
+	"github.com/quentincherifi/c9s/internal/render"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"

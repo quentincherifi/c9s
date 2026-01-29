@@ -9,9 +9,9 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/derailed/k9s/internal/config/data"
-	"github.com/derailed/k9s/internal/config/json"
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/config/json"
+	"github.com/quentincherifi/c9s/internal/slogs"
 	"gopkg.in/yaml.v3"
 )
 

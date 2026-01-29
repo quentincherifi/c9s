@@ -10,8 +10,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/dao"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/dao"
 	"github.com/fvbommel/sortorder"
 )
 

@@ -4,7 +4,7 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "k9s": {
+    "c9s": {
       "additionalProperties": false,
       "properties": {
         "cluster": { "type": "string" },
@@ -52,5 +52,5 @@
       }
     }
   },
-  "required": ["k9s"]
+  "required": ["c9s"]
 }

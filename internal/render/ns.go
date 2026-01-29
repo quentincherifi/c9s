@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/model1"
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/model1"
+	"github.com/quentincherifi/c9s/internal/slogs"
 	"github.com/derailed/tcell/v2"
 	"golang.org/x/exp/slog"
 	v1 "k8s.io/api/core/v1"

@@ -10,7 +10,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// K9sBench the name of the benchmarks config file.
+// C9sBench the name of the benchmarks config file.
 var K9sBench = "bench"
 
 type (

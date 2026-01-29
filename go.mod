@@ -1,4 +1,4 @@
-module github.com/derailed/k9s
+module github.com/quentincherifi/c9s
 
 go 1.25.1
 

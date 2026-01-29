@@ -6,7 +6,7 @@ package ui
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/render"
+	"github.com/quentincherifi/c9s/internal/render"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/labels"
 )

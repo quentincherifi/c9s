@@ -10,9 +10,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/derailed/k9s/internal/port"
-	"github.com/derailed/k9s/internal/slogs"
-	"github.com/derailed/k9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal/port"
+	"github.com/quentincherifi/c9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/ui"
 	"github.com/derailed/tview"
 )
 

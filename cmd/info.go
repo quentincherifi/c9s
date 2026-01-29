@@ -8,10 +8,10 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/derailed/k9s/internal/color"
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/slogs"
-	"github.com/derailed/k9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal/color"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/ui"
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 )

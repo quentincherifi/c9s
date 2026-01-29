@@ -14,7 +14,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-const envFGNodeShell = "K9S_FEATURE_GATE_NODE_SHELL"
+const envFGNodeShell = "C9S_FEATURE_GATE_NODE_SHELL"
 
 var invalidPathCharsRX = regexp.MustCompile(`[:/]+`)
 

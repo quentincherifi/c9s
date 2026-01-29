@@ -70,12 +70,12 @@ Your donations will go a long way in keeping our servers lights on and beers in 
 
 ---
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/derailed/k9s?)](https://goreportcard.com/report/github.com/derailed/k9s)
-[![golangci badge](https://github.com/golangci/golangci-web/blob/master/src/assets/images/badge_a_plus_flat.svg)](https://golangci.com/r/github.com/derailed/k9s)
-[![Docker Pulls](https://img.shields.io/docker/pulls/derailed/k9s.svg?maxAge=604800)](https://hub.docker.com/r/derailed/k9s/)
-[![release](https://img.shields.io/github/release-pre/derailed/k9s.svg)](https://github.com/derailed/k9s/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/quentincherifi/c9s?)](https://goreportcard.com/report/github.com/quentincherifi/c9s)
+[![golangci badge](https://github.com/golangci/golangci-web/blob/master/src/assets/images/badge_a_plus_flat.svg)](https://golangci.com/r/github.com/quentincherifi/c9s)
+[![Docker Pulls](https://img.shields.io/docker/pulls/quentincherifi/c9s.svg?maxAge=604800)](https://hub.docker.com/r/quentincherifi/c9s/)
+[![release](https://img.shields.io/github/release-pre/quentincherifi/c9s.svg)](https://github.com/quentincherifi/c9s/releases)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/mum4k/termdash/blob/master/LICENSE)
-[![Releases](https://img.shields.io/github/downloads/derailed/k9s/total.svg)](https://github.com/derailed/k9s/releases)
+[![Releases](https://img.shields.io/github/downloads/quentincherifi/c9s/total.svg)](https://github.com/quentincherifi/c9s/releases)
 
 ---
 
@@ -112,7 +112,7 @@ Your donations will go a long way in keeping our servers lights on and beers in 
 
 ## Documentation
 
-Please refer to our [K9s documentation](https://k9scli.io) site for installation, usage, customization and tips.
+Please refer to our [K9s documentation](https://c9scli.io) site for installation, usage, customization and tips.
 
 ---
 
@@ -128,12 +128,12 @@ Wanna discuss K9s features with your fellow `K9sers` or simply show your support
 ## Installation
 
 K9s is available on Linux, macOS and Windows platforms.
-Binaries for Linux, Windows and Mac are available as tarballs in the [release page](https://github.com/derailed/k9s/releases).
+Binaries for Linux, Windows and Mac are available as tarballs in the [release page](https://github.com/quentincherifi/c9s/releases).
 
 * Via [Homebrew](https://brew.sh/) for macOS or Linux
 
    ```shell
-   brew install derailed/k9s/k9s
+   # Build from source - see below
    ```
 
 * Via [MacPorts](https://www.macports.org)
@@ -145,7 +145,7 @@ Binaries for Linux, Windows and Mac are available as tarballs in the [release pa
 * Via [snap](https://snapcraft.io/k9s) for Linux
 
   ```shell
-  snap install k9s --devmode
+  snap install c9s --devmode
   ```
 
 * On Arch Linux
@@ -169,7 +169,7 @@ Binaries for Linux, Windows and Mac are available as tarballs in the [release pa
 * On Ubuntu
 
   ```shell
-  wget https://github.com/derailed/k9s/releases/latest/download/k9s_linux_amd64.deb && apt install ./k9s_linux_amd64.deb && rm k9s_linux_amd64.deb
+  wget https://github.com/quentincherifi/c9s/releases/latest/download/k9s_linux_amd64.deb && apt install ./k9s_linux_amd64.deb && rm k9s_linux_amd64.deb
   ```
 
 * On Fedora (42+)
@@ -200,7 +200,7 @@ Binaries for Linux, Windows and Mac are available as tarballs in the [release pa
 
   ```shell
   # NOTE: The dev version will be in effect!
-  go install github.com/derailed/k9s@latest
+  go install github.com/quentincherifi/c9s@latest
   ```
 
 * Via [Webi](https://webinstall.dev) for Linux and macOS
@@ -209,7 +209,7 @@ Binaries for Linux, Windows and Mac are available as tarballs in the [release pa
   curl -sS https://webinstall.dev/k9s | bash
   ```
 
-* Via [pkgx](https://pkgx.dev/pkgs/k9scli.io/) for Linux and macOS
+* Via [pkgx](https://pkgx.dev/pkgs/c9scli.io/) for Linux and macOS
 
   ```shell
   pkgx k9s
@@ -256,13 +256,13 @@ Binaries for Linux, Windows and Mac are available as tarballs in the [release pa
   You can run k9s as a Docker container by mounting your `KUBECONFIG`:
 
   ```shell
-  docker run --rm -it -v $KUBECONFIG:/root/.kube/config derailed/k9s
+  docker run --rm -it -v $KUBECONFIG:/root/.kube/config quentincherifi/c9s
   ```
 
   For default path it would be:
 
   ```shell
-  docker run --rm -it -v ~/.kube/config:/root/.kube/config derailed/k9s
+  docker run --rm -it -v ~/.kube/config:/root/.kube/config quentincherifi/c9s
   ```
 
 ### Building your own Docker image
@@ -327,22 +327,22 @@ Binaries for Linux, Windows and Mac are available as tarballs in the [release pa
 
 ```shell
 # List current version
-k9s version
+c9s version
 
 # To get info about K9s runtime (logs, configs, etc..)
-k9s info
+c9s info
 
 # List all available CLI options
-k9s help
+c9s help
 
 # To run K9s in a given namespace
-k9s -n mycoolns
+c9s -n mycoolns
 
 # Start K9s in an existing KubeConfig context
-k9s --context coolCtx
+c9s --context coolCtx
 
 # Start K9s in readonly mode - with all cluster modification commands disabled
-k9s --readonly
+c9s --readonly
 ```
 
 ## Logs And Debug Logs
@@ -352,7 +352,7 @@ To view the logs and turn on debug mode, use the following commands:
 
 ```shell
 # Find out where the logs are stored
-k9s info
+c9s info
 ```
 
 ```text
@@ -393,7 +393,7 @@ k9s -l debug
 You can override the default log file destination either with the `--logFile` argument:
 
 ```shell
-k9s --logFile /tmp/k9s.log
+c9s --logFile /tmp/k9s.log
 less /tmp/k9s.log
 ```
 
@@ -443,7 +443,7 @@ K9s uses aliases to navigate most K8s resources.
 
 ## K9s Configuration
 
-  K9s keeps its configurations as YAML files inside of a `k9s` directory and the location depends on your operating system. K9s leverages [XDG](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) to load its various configurations files. For information on the default locations for your OS please see [this link](https://github.com/adrg/xdg/blob/master/README.md). If you are still confused a quick `k9s info` will reveal where k9s is loading its configurations from. Alternatively, you can set `K9S_CONFIG_DIR` to tell K9s the directory location to pull its configurations from.
+  K9s keeps its configurations as YAML files inside of a `k9s` directory and the location depends on your operating system. K9s leverages [XDG](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) to load its various configurations files. For information on the default locations for your OS please see [this link](https://github.com/adrg/xdg/blob/master/README.md). If you are still confused a quick `c9s info` will reveal where k9s is loading its configurations from. Alternatively, you can set `K9S_CONFIG_DIR` to tell K9s the directory location to pull its configurations from.
 
   | Unix            | macOS                              | Windows               |
   |-----------------|------------------------------------|-----------------------|
@@ -467,7 +467,7 @@ You can now override the context portForward default address configuration by se
 	  # intel: gpu.intel.com/i915
     gpuVendors:
       bozo: bozo/gpu  # extends the gpu vendor and add "bozo"
-    # The path to screen dump. Default: '%temp_dir%/k9s-screens-%username%' (k9s info)
+    # The path to screen dump. Default: '%temp_dir%/k9s-screens-%username%' (c9s info)
     screenDumpDir: /tmp/dumps
     # Represents ui poll intervals in seconds. Default 2.0 secs. Minimum value is 2.0 - values below will be capped to the minimum.
     refreshRate: 2
@@ -690,9 +690,9 @@ To disable Websocket support, set `KUBECTL_PORT_FORWARD_WEBSOCKETS=false`
 
 As of v0.25.0, you can leverage the `FastForwards` feature to tell K9s how to default port-forwards. In situations where you are dealing with multiple containers or containers exposing multiple ports, it can be cumbersome to specify the desired port-forward from the dialog as in most cases, you already know which container/port tuple you desire. For these use cases, you can now annotate your manifests with the following annotations:
 
-@ `k9scli.io/auto-port-forwards`
+@ `c9scli.io/auto-port-forwards`
   activates one or more port-forwards directly bypassing the port-forward dialog all together.
-@ `k9scli.io/port-forwards`
+@ `c9scli.io/port-forwards`
   pre-selects one or more port-forwards when launching the port-forward dialog.
 
 The annotation value takes on the shape `container-name::[local-port:]container-port`
@@ -708,9 +708,9 @@ kind: Pod
 metadata:
   name: fred
   annotations:
-    k9scli.io/auto-port-forwards: zorg::5556        # => will default to container zorg port 5556 and local port 5566. No port-forward dialog will be shown.
+    c9scli.io/auto-port-forwards: zorg::5556        # => will default to container zorg port 5556 and local port 5566. No port-forward dialog will be shown.
     # Or...
-    k9scli.io/port-forwards: bozo::9090:p1          # => launches the port-forward dialog selecting default port-forward on container bozo port named p1(8081)
+    c9scli.io/port-forwards: bozo::9090:p1          # => launches the port-forward dialog selecting default port-forward on container bozo port named p1(8081)
                                                     # mapping to local port 9090.
     ...
 spec:
@@ -839,8 +839,8 @@ A plugin is defined as follows:
 * Command represents ad-hoc commands the plugin runs upon activation
 * Background specifies whether or not the command runs in the background
 * Args specifies the various arguments that should apply to the command above
-* OverwriteOutput boolean option allows plugin developers to provide custom messages on plugin stdout execution. See example in [#2644](https://github.com/derailed/k9s/pull/2644)
-* Dangerous boolean option enables disabling the plugin when read-only mode is set. See [#2604](https://github.com/derailed/k9s/issues/2604)
+* OverwriteOutput boolean option allows plugin developers to provide custom messages on plugin stdout execution. See example in [#2644](https://github.com/quentincherifi/c9s/pull/2644)
+* Dangerous boolean option enables disabling the plugin when read-only mode is set. See [#2604](https://github.com/quentincherifi/c9s/issues/2604)
 
 K9s does provide additional environment variables for you to customize your plugins arguments. Currently, the available environment variables are as follows:
 
@@ -1111,7 +1111,7 @@ This is a collection of {context_name, skin} tuples (please see example below!)
 Colors can be defined by name or using a hex representation. Of recent, we've added a color named `default` to indicate a transparent background color to preserve your terminal background color settings if so desired.
 
 > NOTE: This is very much an experimental feature at this time, more will be added/modified if this feature has legs so thread accordingly!
-> NOTE: Please see [K9s Skins](https://k9scli.io/topics/skins/) for a list of available colors.
+> NOTE: Please see [K9s Skins](https://c9scli.io/topics/skins/) for a list of available colors.
 
 To skin a specific context and provided the file `in-the-navy.yaml` is present in your skins directory.
 
@@ -1275,8 +1275,8 @@ k9s:
 
 Without the contributions from these fine folks, this project would be a total dud!
 
-<a href="https://github.com/derailed/k9s/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=derailed/k9s" />
+<a href="https://github.com/quentincherifi/c9s/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=quentincherifi/c9s" />
 </a>
 
 ---

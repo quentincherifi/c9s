@@ -3,7 +3,7 @@ package tchart_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/tchart"
+	"github.com/quentincherifi/c9s/internal/tchart"
 	"github.com/derailed/tcell/v2"
 	"github.com/stretchr/testify/assert"
 )

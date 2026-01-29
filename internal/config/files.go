@@ -12,21 +12,21 @@ import (
 	"path/filepath"
 
 	"github.com/adrg/xdg"
-	"github.com/derailed/k9s/internal/config/data"
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/slogs"
 )
 
 const (
-	// K9sEnvConfigDir represents k9s configuration dir env var.
-	K9sEnvConfigDir = "K9S_CONFIG_DIR"
+	// C9sEnvConfigDir represents c9s configuration dir env var.
+	C9sEnvConfigDir = "C9S_CONFIG_DIR"
 
-	// K9sEnvLogsDir represents k9s logs dir env var.
-	K9sEnvLogsDir = "K9S_LOGS_DIR"
+	// C9sEnvLogsDir represents c9s logs dir env var.
+	C9sEnvLogsDir = "C9S_LOGS_DIR"
 
-	// AppName tracks k9s app name.
-	AppName = "k9s"
+	// AppName tracks c9s app name.
+	AppName = "c9s"
 
-	K9sLogsFile = "k9s.log"
+	C9sLogsFile = "c9s.log"
 )
 
 var (
@@ -86,9 +86,9 @@ var (
 func InitLogLoc() error {
 	var appLogDir string
 	switch {
-	case isEnvSet(K9sEnvLogsDir):
-		appLogDir = os.Getenv(K9sEnvLogsDir)
-	case isEnvSet(K9sEnvConfigDir):
+	case isEnvSet(C9sEnvLogsDir):
+		appLogDir = os.Getenv(C9sEnvLogsDir)
+	case isEnvSet(C9sEnvConfigDir):
 		tmpDir, err := UserTmpDir()
 		if err != nil {
 			return err
@@ -104,14 +104,14 @@ func InitLogLoc() error {
 	if err := data.EnsureFullPath(appLogDir, data.DefaultDirMod); err != nil {
 		return err
 	}
-	AppLogFile = filepath.Join(appLogDir, K9sLogsFile)
+	AppLogFile = filepath.Join(appLogDir, C9sLogsFile)
 
 	return nil
 }
 
 // InitLocs initializes k9s artifacts locations.
 func InitLocs() error {
-	if isEnvSet(K9sEnvConfigDir) {
+	if isEnvSet(C9sEnvConfigDir) {
 		return initK9sEnvLocs()
 	}
 
@@ -119,7 +119,7 @@ func InitLocs() error {
 }
 
 func initK9sEnvLocs() error {
-	AppConfigDir = os.Getenv(K9sEnvConfigDir)
+	AppConfigDir = os.Getenv(C9sEnvConfigDir)
 	if err := data.EnsureFullPath(AppConfigDir, data.DefaultDirMod); err != nil {
 		return err
 	}

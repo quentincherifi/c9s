@@ -44,7 +44,7 @@ current_line: &current_line white     # base2
 selection:    &selection    silver    # base2
 comment:      &comment      aqua      # base1
 
-k9s:
+c9s:
   body:
     fgColor: *foreground
     bgColor: *background

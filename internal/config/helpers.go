@@ -9,11 +9,11 @@ import (
 	"os/user"
 	"path/filepath"
 
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/slogs"
 )
 
 const (
-	envPFAddress          = "K9S_DEFAULT_PF_ADDRESS"
+	envPFAddress          = "C9S_DEFAULT_PF_ADDRESS"
 	defaultPortFwdAddress = "localhost"
 )
 

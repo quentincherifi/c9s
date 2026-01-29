@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/model1"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/model1"
 	"github.com/derailed/tcell/v2"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

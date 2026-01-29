@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/adrg/xdg"
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config/data"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -24,33 +24,33 @@ func TestInitLogLoc(t *testing.T) {
 		e   string
 	}{
 		"log-env": {
-			dir: "/tmp/test/k9s/logs",
-			e:   "/tmp/test/k9s/logs/k9s.log",
+			dir: "/tmp/test/c9s/logs",
+			e:   "/tmp/test/c9s/logs/c9s.log",
 		},
 		"xdg-env": {
 			dir: "/tmp/test/xdg-state",
-			e:   "/tmp/test/xdg-state/k9s/k9s.log",
+			e:   "/tmp/test/xdg-state/c9s/c9s.log",
 		},
 		"cfg-env": {
-			dir: "/tmp/test/k9s-test",
-			e:   filepath.Join(tmp, "k9s.log"),
+			dir: "/tmp/test/c9s-test",
+			e:   filepath.Join(tmp, "c9s.log"),
 		},
 	}
 
 	for k := range uu {
 		u := uu[k]
 		t.Run(k, func(t *testing.T) {
-			require.NoError(t, os.Unsetenv(config.K9sEnvLogsDir))
+			require.NoError(t, os.Unsetenv(config.C9sEnvLogsDir))
 			require.NoError(t, os.Unsetenv("XDG_STATE_HOME"))
-			require.NoError(t, os.Unsetenv(config.K9sEnvConfigDir))
+			require.NoError(t, os.Unsetenv(config.C9sEnvConfigDir))
 			switch k {
 			case "log-env":
-				require.NoError(t, os.Setenv(config.K9sEnvLogsDir, u.dir))
+				require.NoError(t, os.Setenv(config.C9sEnvLogsDir, u.dir))
 			case "xdg-env":
 				require.NoError(t, os.Setenv("XDG_STATE_HOME", u.dir))
 				xdg.Reload()
 			case "cfg-env":
-				require.NoError(t, os.Setenv(config.K9sEnvConfigDir, u.dir))
+				require.NoError(t, os.Setenv(config.C9sEnvConfigDir, u.dir))
 			}
 			err := config.InitLogLoc()
 			require.NoError(t, err)
@@ -61,7 +61,7 @@ func TestInitLogLoc(t *testing.T) {
 }
 
 func TestEnsureBenchmarkCfg(t *testing.T) {
-	require.NoError(t, os.Setenv(config.K9sEnvConfigDir, "/tmp/test-config"))
+	require.NoError(t, os.Setenv(config.C9sEnvConfigDir, "/tmp/test-config"))
 	require.NoError(t, config.InitLocs())
 	defer require.NoError(t, os.RemoveAll("/tmp/test-config"))
 
@@ -99,19 +99,19 @@ func TestEnsureBenchmarkCfg(t *testing.T) {
 }
 
 func TestSkinFileFromName(t *testing.T) {
-	config.AppSkinsDir = "/tmp/k9s-test/skins"
-	defer require.NoError(t, os.RemoveAll("/tmp/k9s-test/skins"))
+	config.AppSkinsDir = "/tmp/c9s-test/skins"
+	defer require.NoError(t, os.RemoveAll("/tmp/c9s-test/skins"))
 
 	uu := map[string]struct {
 		n string
 		e string
 	}{
 		"empty": {
-			e: "/tmp/k9s-test/skins/stock.yaml",
+			e: "/tmp/c9s-test/skins/stock.yaml",
 		},
 		"happy": {
 			n: "fred-blee",
-			e: "/tmp/k9s-test/skins/fred-blee.yaml",
+			e: "/tmp/c9s-test/skins/fred-blee.yaml",
 		},
 	}
 

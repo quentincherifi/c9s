@@ -7,15 +7,15 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/config/mock"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config/mock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 )
 
 func TestK9sReload(t *testing.T) {
-	config.AppConfigDir = "/tmp/k9s-test"
+	config.AppConfigDir = "/tmp/c9s-test"
 
 	cl, ct := "cl-1", "ct-1-1"
 
@@ -138,12 +138,12 @@ func TestContextScreenDumpDir(t *testing.T) {
 
 	require.NoError(t, err)
 	require.NoError(t, cfg.Load("testdata/configs/k9s.yaml", true))
-	assert.Equal(t, "/tmp/k9s-test/screen-dumps/cl-1/ct-1-1", cfg.K9s.ContextScreenDumpDir())
+	assert.Equal(t, "/tmp/c9s-test/screen-dumps/cl-1/ct-1-1", cfg.K9s.ContextScreenDumpDir())
 }
 
 func TestAppScreenDumpDir(t *testing.T) {
 	cfg := mock.NewMockConfig(t)
 
 	require.NoError(t, cfg.Load("testdata/configs/k9s.yaml", true))
-	assert.Equal(t, "/tmp/k9s-test/screen-dumps", cfg.K9s.AppScreenDumpDir())
+	assert.Equal(t, "/tmp/c9s-test/screen-dumps", cfg.K9s.AppScreenDumpDir())
 }

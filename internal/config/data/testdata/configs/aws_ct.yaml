@@ -1,4 +1,4 @@
-k9s:
+c9s:
   cluster: arn:aws:eks:eu-central-1:xxx:cluster/fred-blee
   namespace:
     active: default

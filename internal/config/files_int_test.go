@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/adrg/xdg"
-	"github.com/derailed/k9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/config/data"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -23,10 +23,10 @@ func Test_initXDGLocs(t *testing.T) {
 	require.NoError(t, os.Unsetenv("XDG_STATE_HOME"))
 	require.NoError(t, os.Unsetenv("XDG_DATA_HOME"))
 
-	require.NoError(t, os.Setenv("XDG_CONFIG_HOME", filepath.Join(tmp, "k9s-xdg", "config")))
-	require.NoError(t, os.Setenv("XDG_CACHE_HOME", filepath.Join(tmp, "k9s-xdg", "cache")))
-	require.NoError(t, os.Setenv("XDG_STATE_HOME", filepath.Join(tmp, "k9s-xdg", "state")))
-	require.NoError(t, os.Setenv("XDG_DATA_HOME", filepath.Join(tmp, "k9s-xdg", "data")))
+	require.NoError(t, os.Setenv("XDG_CONFIG_HOME", filepath.Join(tmp, "c9s-xdg", "config")))
+	require.NoError(t, os.Setenv("XDG_CACHE_HOME", filepath.Join(tmp, "c9s-xdg", "cache")))
+	require.NoError(t, os.Setenv("XDG_STATE_HOME", filepath.Join(tmp, "c9s-xdg", "state")))
+	require.NoError(t, os.Setenv("XDG_DATA_HOME", filepath.Join(tmp, "c9s-xdg", "data")))
 	xdg.Reload()
 
 	uu := map[string]struct {
@@ -41,15 +41,15 @@ func Test_initXDGLocs(t *testing.T) {
 		hkFile             string
 	}{
 		"check-env": {
-			configDir:          filepath.Join(tmp, "k9s-xdg", "config", "k9s"),
-			configFile:         filepath.Join(tmp, "k9s-xdg", "config", "k9s", data.MainConfigFile),
-			benchmarksDir:      filepath.Join(tmp, "k9s-xdg", "state", "k9s", "benchmarks"),
-			contextsDir:        filepath.Join(tmp, "k9s-xdg", "data", "k9s", "clusters"),
-			contextHotkeysFile: filepath.Join(tmp, "k9s-xdg", "data", "k9s", "clusters", "cl-1", "ct-1-1", "hotkeys.yaml"),
-			contextConfig:      filepath.Join(tmp, "k9s-xdg", "data", "k9s", "clusters", "cl-1", "ct-1-1", data.MainConfigFile),
-			dumpsDir:           filepath.Join(tmp, "k9s-xdg", "state", "k9s", "screen-dumps", "cl-1", "ct-1-1"),
-			benchDir:           filepath.Join(tmp, "k9s-xdg", "state", "k9s", "benchmarks", "cl-1", "ct-1-1"),
-			hkFile:             filepath.Join(tmp, "k9s-xdg", "config", "k9s", "hotkeys.yaml"),
+			configDir:          filepath.Join(tmp, "c9s-xdg", "config", "c9s"),
+			configFile:         filepath.Join(tmp, "c9s-xdg", "config", "c9s", data.MainConfigFile),
+			benchmarksDir:      filepath.Join(tmp, "c9s-xdg", "state", "c9s", "benchmarks"),
+			contextsDir:        filepath.Join(tmp, "c9s-xdg", "data", "c9s", "clusters"),
+			contextHotkeysFile: filepath.Join(tmp, "c9s-xdg", "data", "c9s", "clusters", "cl-1", "ct-1-1", "hotkeys.yaml"),
+			contextConfig:      filepath.Join(tmp, "c9s-xdg", "data", "c9s", "clusters", "cl-1", "ct-1-1", data.MainConfigFile),
+			dumpsDir:           filepath.Join(tmp, "c9s-xdg", "state", "c9s", "screen-dumps", "cl-1", "ct-1-1"),
+			benchDir:           filepath.Join(tmp, "c9s-xdg", "state", "c9s", "benchmarks", "cl-1", "ct-1-1"),
+			hkFile:             filepath.Join(tmp, "c9s-xdg", "config", "c9s", "hotkeys.yaml"),
 		},
 	}
 

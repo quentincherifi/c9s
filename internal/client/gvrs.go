@@ -49,7 +49,7 @@ var (
 	NmxGVR = NewGVR("metrics.k8s.io/v1beta1/nodes")
 	PmxGVR = NewGVR("metrics.k8s.io/v1beta1/pods")
 
-	// K9s...
+	// C9s...
 	CpuGVR = NewGVR("cpu")
 	MemGVR = NewGVR("memory")
 	WkGVR  = NewGVR("workloads")

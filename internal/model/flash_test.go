@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/derailed/k9s/internal/model"
+	"github.com/quentincherifi/c9s/internal/model"
 	"github.com/stretchr/testify/assert"
 )
 

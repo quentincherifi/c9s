@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/derailed/k9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	v1 "k8s.io/api/core/v1"

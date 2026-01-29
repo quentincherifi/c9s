@@ -6,7 +6,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/derailed/k9s/internal/color"
+	"github.com/quentincherifi/c9s/internal/color"
 	"github.com/spf13/cobra"
 )
 

@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/dao"
-	"github.com/derailed/k9s/internal/slogs"
-	"github.com/derailed/k9s/internal/ui"
-	"github.com/derailed/k9s/internal/ui/dialog"
-	"github.com/derailed/k9s/internal/view/cmd"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/dao"
+	"github.com/quentincherifi/c9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal/ui/dialog"
+	"github.com/quentincherifi/c9s/internal/view/cmd"
 	"github.com/derailed/tcell/v2"
 	"github.com/derailed/tview"
 )

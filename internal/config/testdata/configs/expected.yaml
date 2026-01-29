@@ -1,8 +1,8 @@
-k9s:
+c9s:
   liveViewAutoRefresh: true
   gpuVendors:
     bozo: bozo/gpu.com
-  screenDumpDir: /tmp/k9s-test/screen-dumps
+  screenDumpDir: /tmp/c9s-test/screen-dumps
   refreshRate: 100
   apiServerTimeout: 30s
   maxConnRetry: 5

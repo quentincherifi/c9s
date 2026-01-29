@@ -9,13 +9,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/derailed/k9s/internal"
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/model"
-	"github.com/derailed/k9s/internal/render"
-	"github.com/derailed/k9s/internal/slogs"
-	"github.com/derailed/k9s/internal/ui"
-	"github.com/derailed/k9s/internal/view/cmd"
+	"github.com/quentincherifi/c9s/internal"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/model"
+	"github.com/quentincherifi/c9s/internal/render"
+	"github.com/quentincherifi/c9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal/view/cmd"
 	"github.com/derailed/tcell/v2"
 )
 

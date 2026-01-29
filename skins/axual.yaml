@@ -11,7 +11,7 @@ grey: &grey "#A99688"
 light: &light "#F1EFE4"
 
 # Skin...
-k9s:
+c9s:
   # General K9s styles
   body:
     fgColor: *yellow

@@ -6,8 +6,8 @@ package dao_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/dao"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/dao"
 	"github.com/stretchr/testify/assert"
 )
 

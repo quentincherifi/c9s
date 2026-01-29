@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/derailed/k9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config"
 	"github.com/derailed/tview"
 )
 

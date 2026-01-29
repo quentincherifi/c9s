@@ -7,15 +7,15 @@ import (
 	"os"
 	"testing"
 
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/config/mock"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config/mock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 )
 
 func Test_activeConfig(t *testing.T) {
-	require.NoError(t, os.Setenv(config.K9sEnvConfigDir, "/tmp/test-config"))
+	require.NoError(t, os.Setenv(config.C9sEnvConfigDir, "/tmp/test-config"))
 	require.NoError(t, config.InitLocs())
 
 	cl, ct := "cl-1", "ct-1-1"

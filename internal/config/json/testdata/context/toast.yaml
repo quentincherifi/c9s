@@ -1,4 +1,4 @@
-k9s:
+c9s:
   cluster: kind-dashb
   readOnly: false
   skin: nightfox

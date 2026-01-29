@@ -4,7 +4,7 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "k9s": {
+    "c9s": {
       "additionalProperties": false,
       "properties": {
         "liveViewAutoRefresh": { "type": "boolean" },
@@ -159,5 +159,5 @@
       }
     }
   },
-  "required": ["k9s"]
+  "required": ["c9s"]
 }

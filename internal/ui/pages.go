@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/derailed/k9s/internal/model"
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/model"
+	"github.com/quentincherifi/c9s/internal/slogs"
 	"github.com/derailed/tview"
 )
 

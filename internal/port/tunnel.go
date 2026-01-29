@@ -9,7 +9,7 @@ import (
 	"log/slog"
 	"net"
 
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/slogs"
 )
 
 // PortTunnels represents a collection of tunnels.

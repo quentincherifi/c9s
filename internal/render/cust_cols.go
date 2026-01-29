@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/derailed/k9s/internal/model1"
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/model1"
+	"github.com/quentincherifi/c9s/internal/slogs"
 	"github.com/itchyny/gojq"
 	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

@@ -1,7 +1,7 @@
-k9s:
+c9s:
   liveViewAutoRefresh: true
   gpuVendors: {}
-  screenDumpDir: /tmp/k9s-test/screen-dumps
+  screenDumpDir: /tmp/c9s-test/screen-dumps
   refreshRate: 2
   apiServerTimeout: 10s
   maxConnRetry: 5

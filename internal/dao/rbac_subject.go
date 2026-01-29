@@ -7,8 +7,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/derailed/k9s/internal"
-	"github.com/derailed/k9s/internal/render"
+	"github.com/quentincherifi/c9s/internal"
+	"github.com/quentincherifi/c9s/internal/render"
 	"k8s.io/apimachinery/pkg/runtime"
 )
 

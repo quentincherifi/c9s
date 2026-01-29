@@ -6,8 +6,8 @@ package view_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/view"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/view"
 	"github.com/stretchr/testify/assert"
 )
 

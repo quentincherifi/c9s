@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/derailed/k9s/internal/config/json"
+	"github.com/quentincherifi/c9s/internal/config/json"
 	"k8s.io/client-go/tools/clientcmd/api"
 )
 

@@ -6,7 +6,7 @@ package port_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/port"
+	"github.com/quentincherifi/c9s/internal/port"
 	"github.com/stretchr/testify/assert"
 )
 

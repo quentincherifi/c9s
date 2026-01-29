@@ -1,13 +1,12 @@
-k9s:
+c9s:
   cluster: cl-1
-  skin: in_the_navy
-  readOnly: true
   namespace:
-    active: default
+    active: ns-2
     lockFavorites: false
     favorites:
-    - default
+      - default
   view:
     active: po
   featureGates:
     nodeShell: false
+  proxy: null

@@ -12,10 +12,10 @@ import (
 	"testing"
 
 	"github.com/adrg/xdg"
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/config/data"
-	"github.com/derailed/k9s/internal/config/mock"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/config/mock"
 	m "github.com/petergtz/pegomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -27,10 +27,10 @@ func init() {
 }
 
 func TestConfigSave(t *testing.T) {
-	config.AppConfigFile = "/tmp/k9s-test/k9s.yaml"
-	sd := "/tmp/k9s-test/screen-dumps"
+	config.AppConfigFile = "/tmp/c9s-test/k9s.yaml"
+	sd := "/tmp/c9s-test/screen-dumps"
 	cl, ct := "cl-1", "ct-1-1"
-	_ = os.RemoveAll(("/tmp/k9s-test"))
+	_ = os.RemoveAll(("/tmp/c9s-test"))
 
 	uu := map[string]struct {
 		ct       string

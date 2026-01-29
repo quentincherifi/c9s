@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/derailed/k9s/internal"
+	"github.com/quentincherifi/c9s/internal"
 	"github.com/stretchr/testify/assert"
 )
 

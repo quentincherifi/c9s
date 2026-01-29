@@ -9,7 +9,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/derailed/k9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/config/data"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -66,7 +66,7 @@ func TestHelperInList(t *testing.T) {
 func TestEnsureDirPathNone(t *testing.T) {
 	const mod = 0744
 
-	dir := filepath.Join(os.TempDir(), "k9s-test")
+	dir := filepath.Join(os.TempDir(), "c9s-test")
 	_ = os.Remove(dir)
 
 	path := filepath.Join(dir, "duh.yaml")
@@ -79,7 +79,7 @@ func TestEnsureDirPathNone(t *testing.T) {
 
 func TestEnsureDirPathNoOpt(t *testing.T) {
 	var mod os.FileMode = 0744
-	dir := filepath.Join(os.TempDir(), "k9s-test")
+	dir := filepath.Join(os.TempDir(), "c9s-test")
 	require.NoError(t, os.RemoveAll(dir))
 	require.NoError(t, os.Mkdir(dir, mod))
 

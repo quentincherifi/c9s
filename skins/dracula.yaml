@@ -17,7 +17,7 @@ red: &red "#ff5555"
 yellow: &yellow "#f1fa8c"
 
 # Skin...
-k9s:
+c9s:
   # General K9s styles
   body:
     fgColor: *foreground

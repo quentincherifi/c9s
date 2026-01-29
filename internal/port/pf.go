@@ -13,10 +13,10 @@ import (
 )
 
 const (
-	// K9sAutoPortForwardsKey represents an auto portforwards annotation.
+	// C9sAutoPortForwardsKey represents an auto portforwards annotation.
 	K9sAutoPortForwardsKey = "k9scli.io/auto-port-forwards"
 
-	// K9sPortForwardsKey represents a portforwards annotation.
+	// C9sPortForwardsKey represents a portforwards annotation.
 	K9sPortForwardsKey = "k9scli.io/port-forwards"
 )
 

@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/derailed/k9s/internal/port"
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/port"
+	"github.com/quentincherifi/c9s/internal/slogs"
 	"k8s.io/client-go/tools/portforward"
 )
 

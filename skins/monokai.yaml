@@ -17,7 +17,7 @@ yellow: &yellow "#e1df8f"
 darkGray: &darkGray "#666666"
 
 # Skin...
-k9s:
+c9s:
   # General K9s styles
   body:
     fgColor: *foreground

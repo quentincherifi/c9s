@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/derailed/k9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/client"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

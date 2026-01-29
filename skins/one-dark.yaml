@@ -16,7 +16,7 @@ yellow: &yellow "#e5c07b"
 yellow_bright: &yellow_bright "#d19a66"
 
 # Skin...
-k9s:
+c9s:
   body:
     fgColor: *foreground
     bgColor: *background

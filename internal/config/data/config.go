@@ -8,14 +8,14 @@ import (
 	"io"
 	"sync"
 
-	"github.com/derailed/k9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/client"
 	"gopkg.in/yaml.v3"
 	"k8s.io/client-go/tools/clientcmd/api"
 )
 
 // Config tracks a context configuration.
 type Config struct {
-	Context *Context `yaml:"k9s"`
+	Context *Context `yaml:"c9s"`
 	mx      sync.RWMutex
 }
 

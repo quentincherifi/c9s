@@ -9,12 +9,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/config/data"
-	"github.com/derailed/k9s/internal/config/mock"
-	"github.com/derailed/k9s/internal/model"
-	"github.com/derailed/k9s/internal/model1"
-	"github.com/derailed/k9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/config/mock"
+	"github.com/quentincherifi/c9s/internal/model"
+	"github.com/quentincherifi/c9s/internal/model1"
+	"github.com/quentincherifi/c9s/internal/ui"
 	"github.com/derailed/tcell/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -22,9 +22,9 @@ import (
 )
 
 func TestSkinnedContext(t *testing.T) {
-	require.NoError(t, os.Setenv(config.K9sEnvConfigDir, "/tmp/k9s-test"))
+	require.NoError(t, os.Setenv(config.C9sEnvConfigDir, "/tmp/c9s-test"))
 	require.NoError(t, config.InitLocs())
-	defer require.NoError(t, os.RemoveAll(config.K9sEnvConfigDir))
+	defer require.NoError(t, os.RemoveAll(config.C9sEnvConfigDir))
 
 	sf := filepath.Join("..", "config", "testdata", "skins", "black-and-wtf.yaml")
 	raw, err := os.ReadFile(sf)
@@ -53,9 +53,9 @@ func TestSkinnedContext(t *testing.T) {
 }
 
 func TestBenchConfig(t *testing.T) {
-	require.NoError(t, os.Setenv(config.K9sEnvConfigDir, "/tmp/test-config"))
+	require.NoError(t, os.Setenv(config.C9sEnvConfigDir, "/tmp/test-config"))
 	require.NoError(t, config.InitLocs())
-	defer require.NoError(t, os.RemoveAll(config.K9sEnvConfigDir))
+	defer require.NoError(t, os.RemoveAll(config.C9sEnvConfigDir))
 
 	bc, err := config.EnsureBenchmarksCfgFile("cl-1", "ct-1")
 	require.NoError(t, err)

@@ -6,8 +6,8 @@ package render_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/model1"
-	"github.com/derailed/k9s/internal/render"
+	"github.com/quentincherifi/c9s/internal/model1"
+	"github.com/quentincherifi/c9s/internal/render"
 	"github.com/derailed/tcell/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

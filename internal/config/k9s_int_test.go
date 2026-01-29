@@ -126,11 +126,11 @@ func Test_screenDumpDirOverride(t *testing.T) {
 		e   string
 	}{
 		"empty": {
-			e: "/tmp/k9s-test/screen-dumps",
+			e: "/tmp/c9s-test/screen-dumps",
 		},
 		"override": {
-			dir: "/tmp/k9s-test/sd",
-			e:   "/tmp/k9s-test/sd",
+			dir: "/tmp/c9s-test/sd",
+			e:   "/tmp/c9s-test/sd",
 		},
 	}
 

@@ -16,7 +16,7 @@ magenta: &magenta "#b16185"
 blue: &blue "#448488"
 red: &red "#cc231c"
 
-k9s:
+c9s:
   body:
     fgColor: *foreground
     bgColor: *background

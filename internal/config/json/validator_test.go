@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/derailed/k9s/internal/config/json"
+	"github.com/quentincherifi/c9s/internal/config/json"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -132,10 +132,10 @@ func TestValidateK9s(t *testing.T) {
 		err string
 	}{
 		"happy": {
-			f: "testdata/k9s/cool.yaml",
+			f: "testdata/c9s/cool.yaml",
 		},
 		"toast": {
-			f:   "testdata/k9s/toast.yaml",
+			f:   "testdata/c9s/toast.yaml",
 			err: `Additional property shellPods is not allowed`,
 		},
 	}

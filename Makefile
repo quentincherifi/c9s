@@ -1,13 +1,13 @@
-NAME            := k9s
-VERSION         ?= v0.50.18
-PACKAGE         := github.com/derailed/$(NAME)
+NAME            := c9s
+VERSION         ?= v0.1.0
+PACKAGE         := github.com/quentincherifi/$(NAME)
 OUTPUT_BIN      ?= execs/${NAME}
 GO_FLAGS        ?=
 GO_TAGS	        ?= netgo
 CGO_ENABLED     ?=0
 GIT_REV         ?= $(shell git rev-parse --short HEAD)
 
-IMG_NAME        := derailed/k9s
+IMG_NAME        := quentincherifi/c9s
 IMAGE           := ${IMG_NAME}:${VERSION}
 BUILD_PLATFORMS ?= linux/amd64,linux/arm64
 

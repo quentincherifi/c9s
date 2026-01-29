@@ -13,7 +13,7 @@ magenta: &magenta "#d3869b"
 blue: &blue "#7daea3"
 red: &red "#ea6962"
 
-k9s:
+c9s:
   body:
     fgColor: *foreground
     bgColor: *background

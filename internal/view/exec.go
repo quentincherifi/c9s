@@ -17,12 +17,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/model"
-	"github.com/derailed/k9s/internal/render"
-	"github.com/derailed/k9s/internal/slogs"
-	"github.com/derailed/k9s/internal/ui/dialog"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/model"
+	"github.com/quentincherifi/c9s/internal/render"
+	"github.com/quentincherifi/c9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/ui/dialog"
 	"github.com/fatih/color"
 	v1 "k8s.io/api/core/v1"
 	kerrors "k8s.io/apimachinery/pkg/api/errors"
@@ -39,7 +39,7 @@ const (
 	outputPrefix = "[output]"
 )
 
-var editorEnvVars = []string{"K9S_EDITOR", "KUBE_EDITOR", "EDITOR"}
+var editorEnvVars = []string{"C9S_EDITOR", "KUBE_EDITOR", "EDITOR"}
 
 type shellOpts struct {
 	clear, background bool
@@ -199,7 +199,7 @@ func execute(opts *shellOpts, statusChan chan<- string) error {
 	cmd := exec.CommandContext(ctx, opts.binary, opts.args...)
 	slog.Debug("Exec command", slogs.Command, opts)
 
-	if env := os.Getenv("K9S_EDITOR"); env != "" {
+	if env := os.Getenv("C9S_EDITOR"); env != "" {
 		// There may be situations where the user sets the editor as the binary
 		// followed by some arguments (e.g. "code -w" to make it work with vscode)
 		//

@@ -1,14 +1,12 @@
-k9s:
+c9s:
   cluster: cl-2
-  skin: skin-2
-  readOnly: true
   namespace:
-    active: ns-2
-    lockFavorites: true
+    active: default
+    lockFavorites: false
     favorites:
-    - ns-1
-    - ns-2
+      - default
   view:
-    active: svc
+    active: po
   featureGates:
-    nodeShell: true
+    nodeShell: false
+  proxy: null

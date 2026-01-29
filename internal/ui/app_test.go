@@ -6,8 +6,8 @@ package ui_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/config/mock"
-	"github.com/derailed/k9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal/config/mock"
+	"github.com/quentincherifi/c9s/internal/ui"
 	"github.com/stretchr/testify/assert"
 )
 

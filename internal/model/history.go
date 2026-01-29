@@ -7,8 +7,8 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/derailed/k9s/internal/slogs"
-	"github.com/derailed/k9s/internal/view/cmd"
+	"github.com/quentincherifi/c9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/view/cmd"
 )
 
 // MaxHistory tracks max command history.

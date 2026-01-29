@@ -11,7 +11,7 @@ import (
 	"log/slog"
 	"slices"
 
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/slogs"
 	"github.com/xeipuuv/gojsonschema"
 	"gopkg.in/yaml.v3"
 )
@@ -35,7 +35,7 @@ const (
 	// HotkeysSchema describes hotkeys schema.
 	HotkeysSchema = "hotkeys.json"
 
-	// K9sSchema describes k9s config schema.
+	// C9sSchema describes k9s config schema.
 	K9sSchema = "k9s.json"
 
 	// ContextSchema describes context config schema.

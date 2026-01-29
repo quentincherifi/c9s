@@ -14,7 +14,7 @@ iris: &iris "#c4a7e7"
 love: &love "#eb6f92"
 
 # Skin...
-k9s:
+c9s:
   # General K9s styles
   body:
     fgColor: *text

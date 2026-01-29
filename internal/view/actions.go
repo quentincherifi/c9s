@@ -10,10 +10,10 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/slogs"
-	"github.com/derailed/k9s/internal/ui"
-	"github.com/derailed/k9s/internal/ui/dialog"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal/ui/dialog"
 	"github.com/derailed/tcell/v2"
 	"k8s.io/apimachinery/pkg/util/sets"
 )

@@ -6,8 +6,8 @@ package ui_test
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/ui"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -15,7 +15,7 @@ func TestNewLogoView(t *testing.T) {
 	v := ui.NewLogo(config.NewStyles())
 	v.Reset()
 
-	const elogo = "[#ffa500::b] ____  __ ________       \n[#ffa500::b]|    |/  /   __   \\______\n[#ffa500::b]|       /\\____    /  ___/\n[#ffa500::b]|    \\   \\  /    /\\___  \\\n[#ffa500::b]|____|\\__ \\/____//____  /\n[#ffa500::b]         \\/           \\/ \n"
+	const elogo = "[#ffa500::b]  ____ ___  ____       \n[#ffa500::b] / ___|__ \\/ ___|      \n[#ffa500::b]| |    / _/\\___ \\      \n[#ffa500::b]| |___| |   ___) |     \n[#ffa500::b] \\____|_|  |____/      \n[#ffa500::b]  Claude + K9s = C9s   \n"
 	assert.Equal(t, elogo, v.Logo().GetText(false))
 	assert.Empty(t, v.Status().GetText(false))
 }
@@ -25,17 +25,17 @@ func TestLogoStatus(t *testing.T) {
 		logo, msg, e string
 	}{
 		"info": {
-			"[#008000::b] ____  __ ________       \n[#008000::b]|    |/  /   __   \\______\n[#008000::b]|       /\\____    /  ___/\n[#008000::b]|    \\   \\  /    /\\___  \\\n[#008000::b]|____|\\__ \\/____//____  /\n[#008000::b]         \\/           \\/ \n",
+			"[#008000::b]  ____ ___  ____       \n[#008000::b] / ___|__ \\/ ___|      \n[#008000::b]| |    / _/\\___ \\      \n[#008000::b]| |___| |   ___) |     \n[#008000::b] \\____|_|  |____/      \n[#008000::b]  Claude + K9s = C9s   \n",
 			"blee",
 			"[#ffffff::b]blee\n",
 		},
 		"warn": {
-			"[#c71585::b] ____  __ ________       \n[#c71585::b]|    |/  /   __   \\______\n[#c71585::b]|       /\\____    /  ___/\n[#c71585::b]|    \\   \\  /    /\\___  \\\n[#c71585::b]|____|\\__ \\/____//____  /\n[#c71585::b]         \\/           \\/ \n",
+			"[#c71585::b]  ____ ___  ____       \n[#c71585::b] / ___|__ \\/ ___|      \n[#c71585::b]| |    / _/\\___ \\      \n[#c71585::b]| |___| |   ___) |     \n[#c71585::b] \\____|_|  |____/      \n[#c71585::b]  Claude + K9s = C9s   \n",
 			"blee",
 			"[#ffffff::b]blee\n",
 		},
 		"err": {
-			"[#ff0000::b] ____  __ ________       \n[#ff0000::b]|    |/  /   __   \\______\n[#ff0000::b]|       /\\____    /  ___/\n[#ff0000::b]|    \\   \\  /    /\\___  \\\n[#ff0000::b]|____|\\__ \\/____//____  /\n[#ff0000::b]         \\/           \\/ \n",
+			"[#ff0000::b]  ____ ___  ____       \n[#ff0000::b] / ___|__ \\/ ___|      \n[#ff0000::b]| |    / _/\\___ \\      \n[#ff0000::b]| |___| |   ___) |     \n[#ff0000::b] \\____|_|  |____/      \n[#ff0000::b]  Claude + K9s = C9s   \n",
 			"blee",
 			"[#ffffff::b]blee\n",
 		},

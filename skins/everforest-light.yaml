@@ -15,7 +15,7 @@ pink: &pink "#df69ba"
 orange: &orange "#f57d26"
 
 # Skin...
-k9s:
+c9s:
   # General K9s styles
   body:
     fgColor: *text

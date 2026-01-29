@@ -6,8 +6,8 @@ package ui
 import (
 	"testing"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/model1"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/model1"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -7,28 +7,28 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/derailed/k9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/config"
 	"github.com/derailed/tview"
 )
 
-// LogoSmall K9s small log.
+// LogoSmall C9s small logo.
 var LogoSmall = []string{
-	` ____  __ ________       `,
-	`|    |/  /   __   \______`,
-	`|       /\____    /  ___/`,
-	`|    \   \  /    /\___  \`,
-	`|____|\__ \/____//____  /`,
-	`         \/           \/ `,
+	`  ____ ___  ____       `,
+	` / ___|__ \/ ___|      `,
+	`| |    / _/\___ \      `,
+	`| |___| |   ___) |     `,
+	` \____|_|  |____/      `,
+	`  Claude + K9s = C9s   `,
 }
 
-// LogoBig K9s big logo for splash page.
+// LogoBig C9s big logo for splash page.
 var LogoBig = []string{
-	` ____  __ ________        _______  ____     ___ `,
-	`|    |/  /   __   \______/   ___ \|    |   |   |`,
-	`|       /\____    /  ___/    \  \/|    |   |   |`,
-	`|    \   \  /    /\___  \     \___|    |___|   |`,
-	`|____|\__ \/____//____  /\______  /_______ \___|`,
-	`         \/           \/        \/        \/    `,
+	`  ______  ___   _____   `,
+	` / ___\ \/ _ \ / ____|  `,
+	`| |    \  (_) |\___  \  `,
+	`| |___ /\ \_, | ___) |  `,
+	` \____/_/\_\__/|____/   `,
+	`                        `,
 }
 
 // Splash represents a splash screen.

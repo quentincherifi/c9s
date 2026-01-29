@@ -11,18 +11,18 @@ import (
 	"os"
 	"time"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/config/data"
-	"github.com/derailed/k9s/internal/config/json"
-	"github.com/derailed/k9s/internal/slogs"
-	"github.com/derailed/k9s/internal/view/cmd"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/config/data"
+	"github.com/quentincherifi/c9s/internal/config/json"
+	"github.com/quentincherifi/c9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/view/cmd"
 	"gopkg.in/yaml.v3"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 )
 
 // Config tracks K9s configuration options.
 type Config struct {
-	K9s      *K9s `yaml:"k9s" json:"k9s"`
+	K9s      *K9s `yaml:"c9s" json:"c9s"`
 	conn     client.Connection
 	settings data.KubeSettings
 }

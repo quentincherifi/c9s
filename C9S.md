@@ -18,10 +18,10 @@ From any K9s view (pods, deployments, etc.), run:
 :claude set-key YOUR_ANTHROPIC_API_KEY
 ```
 
-Or configure in `~/.config/k9s/config.yaml`:
+Or configure in `~/.config/c9s/config.yaml`:
 
 ```yaml
-k9s:
+c9s:
   ai:
     enabled: true
     apiKey: "sk-ant-api03-..."

@@ -7,9 +7,9 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/derailed/k9s/internal/client"
-	"github.com/derailed/k9s/internal/render"
-	"github.com/derailed/k9s/internal/slogs"
+	"github.com/quentincherifi/c9s/internal/client"
+	"github.com/quentincherifi/c9s/internal/render"
+	"github.com/quentincherifi/c9s/internal/slogs"
 	"k8s.io/apimachinery/pkg/runtime"
 )
 

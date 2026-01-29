@@ -18,7 +18,7 @@ blue: &blue "#719cd6"
 red: &red "#c94f6d"
 
 # Skin...
-k9s:
+c9s:
   bodys:
     fgColor: *foreground
     bgColor: *background

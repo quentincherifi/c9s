@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/derailed/k9s/internal/config"
-	"github.com/derailed/k9s/internal/model"
-	"github.com/derailed/k9s/internal/ui"
+	"github.com/quentincherifi/c9s/internal/config"
+	"github.com/quentincherifi/c9s/internal/model"
+	"github.com/quentincherifi/c9s/internal/ui"
 	"github.com/derailed/tcell/v2"
 	"github.com/stretchr/testify/assert"
 )
