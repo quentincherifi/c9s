@@ -1,11 +1,61 @@
 <img src="assets/k9s.png" alt="k9s">
 
-## K9s - Kubernetes CLI To Manage Your Clusters In Style!
+## C9S - K9s + Claude AI Integration
+
+> **This is a fork of K9s with built-in Claude AI assistance for Kubernetes troubleshooting.**
 
 K9s provides a terminal UI to interact with your Kubernetes clusters.
 The aim of this project is to make it easier to navigate, observe and manage
 your applications in the wild. K9s continually watches Kubernetes
 for changes and offers subsequent commands to interact with your observed resources.
+
+---
+
+## C9S: AI-Powered Kubernetes Assistance
+
+C9S brings Claude AI directly into your K9s workflow. Ask questions about your cluster, troubleshoot issues, and get contextual help without leaving the terminal.
+
+### Quick Start
+
+```bash
+# Set your Anthropic API key (from any K9s view)
+:claude set-key sk-ant-api03-YOUR_KEY_HERE
+
+# Open the AI assistant
+:claude
+
+# Or ask a question directly
+:claude why is my pod crashing?
+```
+
+### Features
+
+- **Context-Aware**: Claude knows your current cluster, namespace, and selected resource
+- **Interactive Chat**: Have a conversation about your Kubernetes environment
+- **Troubleshooting**: Get explanations and solutions for common issues
+- **K9s Integration**: Seamless navigation with `:claude` or `:ai` commands
+
+### Configuration
+
+Add to your `~/.config/k9s/config.yaml`:
+
+```yaml
+k9s:
+  ai:
+    enabled: true
+    apiKey: "sk-ant-api03-..."      # Or use apiKeyEnv below
+    apiKeyEnv: "ANTHROPIC_API_KEY"  # Environment variable name
+    model: "claude-sonnet-4-20250514"
+    maxTokens: 4096
+```
+
+Or set the environment variable:
+
+```bash
+export ANTHROPIC_API_KEY="sk-ant-api03-..."
+```
+
+See [C9S.md](C9S.md) for full documentation.
 
 ---
 
@@ -386,6 +436,8 @@ K9s uses aliases to navigate most K8s resources.
 | Launch pulses view                                                              | `:`pulses or pu⏎              |                                                                        |
 | Launch XRay view                                                                | `:`xray RESOURCE [NAMESPACE]⏎ | RESOURCE can be one of po, svc, dp, rs, sts, ds, NAMESPACE is optional |
 | Launch Popeye view                                                              | `:`popeye or pop⏎             | See [popeye](#popeye)                                                  |
+| Launch Claude AI assistant                                                      | `:`claude or ai⏎              | Opens AI chat with current context                                     |
+| Ask Claude a question                                                           | `:`claude why is pod failing?⏎| Directly ask a question                                                |
 
 ---
 
