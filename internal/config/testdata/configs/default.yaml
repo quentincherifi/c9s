@@ -48,3 +48,7 @@ k9s:
       critical: 90
       warn: 70
   defaultView: ""
+  ai:
+    enabled: false
+    model: claude-sonnet-4-20250514
+    maxTokens: 4096
